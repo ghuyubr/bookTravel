@@ -52,7 +52,8 @@ class Login extends CI_Controller{
 				}
 				else
 				{
-					echo "username salah";
+					$this->session->set_flashdata('errorLogin', '<div class="alert alert-danger" role="alert">Username atau password salah</div>');
+					$this->load->view('v_login');
 				
 				}
 		// $username = $this->input->post('username');

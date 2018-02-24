@@ -39,6 +39,8 @@
   <div class="login-box-body">
     <p class="login-box-msg">Login sekarang</p>
 
+    <?php echo $this->session->flashdata('errorLogin'); ?>
+
     <form action="<?php echo base_url('login/aksi_login') ?>" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username" name="username">
@@ -63,14 +65,6 @@
         <!-- /.col -->
       </div>
     </form>
-
-    <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-        Google+</a>
-    </div>
     <!-- /.social-auth-links -->
 
     <a href="#">I forgot my password</a><br>

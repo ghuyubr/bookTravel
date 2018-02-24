@@ -4,6 +4,12 @@ class Admin extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
+		if ($this->session->userdata('username')=="") {
+			redirect('e404');
+		}
+		elseif ($this->session->userdata('level')=='user') {
+			redirect('e404');
+		}
 		$this->load->model("m_data");
 	}
 

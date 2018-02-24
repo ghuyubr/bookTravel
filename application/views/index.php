@@ -105,11 +105,12 @@
 								   <!-- Tab panes -->
 									<div class="tab-content">
 									 <div role="tabpanel" class="tab-pane active" id="flights">
+									 	<form action="<?php echo base_url('Search/cari_rute'); ?>" method="get">
 										<div class="row">
 											<div class="col-xxs-12 col-xs-6 mt">
 												<div class="input-field">
 													<label for="from">Dari</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Semarang, Jawa tengah"/>
+													<input name="rute_from" type="text" class="form-control" id="from-place" placeholder="Semarang, Jawa tengah"/>
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-6 mt">
@@ -169,6 +170,7 @@
 												<input type="submit" class="btn btn-primary btn-block" value="Search Flight">
 											</div>
 										</div>
+									</form>
 									 </div>
 
 									 <div role="tabpanel" class="tab-pane" id="hotels">

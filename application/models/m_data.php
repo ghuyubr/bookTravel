@@ -26,5 +26,11 @@ class M_data extends CI_Model{
 	function update_data($where,$data,$table){
 		$this->db->where($where);
 		$this->db->update($table,$data);
-	}	
+	}
+
+	public function tampilPencarian($ruteFrom)
+	{
+		$qry = $this->db->query("select * from rute where rute_from='$ruteFrom'");
+		return $qry;
+	}
 }
