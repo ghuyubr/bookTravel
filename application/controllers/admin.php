@@ -29,11 +29,28 @@ class Admin extends CI_Controller{
 		$data['content']='tampil/v_user';
 		$this->load->view('tampil/main',$data);
 	}
-	function v_addmaskapai()
+
+	function v_tambah_useradmin()
+	{
+		$data['show']=$this->m_data->select('user');
+		$data['side']='tampil/side';
+		$data['content']='tampil/v_tambah_useradmin';
+		$this->load->view('tampil/main',$data);
+	}
+
+	function v_rutemaskapai()
 	{
 		$data['show']=$this->m_data->select('rute');
 		$data['side']='tampil/side';
-		$data['content']='tampil/v_addmaskapai';
+		$data['content']='tampil/v_rutemaskapai';
+		$this->load->view('tampil/main',$data);
+	}	
+
+	function v_tambahrute()
+	{
+		$data['show']=$this->m_data->select('rute');
+		$data['side']='tampil/side';
+		$data['content']='tampil/v_tambahrute';
 		$this->load->view('tampil/main',$data);
 	}
 
@@ -47,7 +64,7 @@ class Admin extends CI_Controller{
 		$where = array('userid' => $id);
 		$data['show'] = $this->m_data->edit_data($where,'user')->result();
 		$data['side']='tampil/side';
-		$data['content']='v_edit';
+		$data['content']='tampil/v_edit';
 		$this->load->view('tampil/main',$data);
 	}	
 

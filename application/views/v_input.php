@@ -33,7 +33,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="<?php echo base_url('assets/lte/') ?>index2.html"><b>Admin</b>LTE</a>
+    <a href="<?php echo base_url('') ?>"><b>Book</b>Travel</a>
   </div>
 
   <div class="register-box-body">

@@ -12,6 +12,7 @@
 					<th>Username</th>
 					<th>Fullname</th>
 					<th>Email</th>
+					<th>level</th>
 					<th>Aksi</th>
 				</tr>
 			</thead>
@@ -24,6 +25,7 @@
 						<td><?php echo $tuser->username ?></td>
 						<td><?php echo $tuser->fullname ?></td>
 						<td><?php echo $tuser->email ?></td>
+						<td><?php echo $tuser->level ?></td>
 						<td>
 							<div class="btn btn-warning" ><?php echo anchor('admin/update_user/'.$tuser->userid,'Edit'); ?></div>
 							<button class="btn btn-danger" onclick="ngapus_user(<?php echo $tuser->userid;?>)">Hapus</button>

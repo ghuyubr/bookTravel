@@ -8,7 +8,7 @@
           <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Admin control</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -28,14 +28,16 @@
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-plane"></i> <span>User</span>
+            <i class="fa fa-plane"></i> <span>Admin</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/v_user') ?>"><i class="fa fa-circle-o"></i>User Table</a></li>
-            <li><a href="<?php echo base_url('admin/v_addmaskapai') ?>"><i class="fa fa-circle-o"></i>Tambah Maskapai</a></li>
+            <li><a href="<?php echo base_url('admin/v_tambah_useradmin') ?>"><i class="fa fa-circle-o"></i>Tambah User/admin</a></li>
+            <li><a href="<?php echo base_url('admin/v_user') ?>"><i class="fa fa-circle-o"></i>Data User/admin</a></li>
+            <li><a href="<?php echo base_url('admin/v_tambahrute') ?>"><i class="fa fa-circle-o"></i>Tambah Rute Maskapai</a></li>
+            <li><a href="<?php echo base_url('admin/v_rutemaskapai') ?>"><i class="fa fa-circle-o"></i>Rute Maskapai</a></li>
           </ul>
         </li>
         

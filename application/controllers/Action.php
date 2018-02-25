@@ -82,5 +82,41 @@ class Action extends CI_Controller{
 		$this->m_data->input_data($data,'user');
 		redirect('login');
 	}
+
+	function tambah_useradmin(){
+		$username = $this->input->post('username');
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+ 		$fullname = $this->input->post('fullname');
+ 		$level = $this->input->post('level');
+
+		$data = array(
+			'username' => $username,
+			'email' => $email,
+			'password' => md5($password),
+			'fullname' => $fullname,
+			'level' => $level
+			);
+		$this->m_data->input_data($data,'user');
+		redirect('admin/v_user');
+	}
+
+	function tambah_rute(){
+		$transportationid = $this->input->post('transportationid');
+		$depart_at = $this->input->post('depart_at');
+		$rute_from = $this->input->post('rute_from');
+ 		$rute_to = $this->input->post('rute_to');
+ 		$price = $this->input->post('price');
+
+		$data = array(
+			'transportationid' => $transportationid,
+			'depart_at' => $depart_at,
+			'rute_from' => ($rute_from),
+			'rute_to' => $rute_to,
+			'price' => $price
+			);
+		$this->m_data->input_data($data,'rute');
+		redirect('admin/v_rutemaskapai');
+	}
  
 }

@@ -12,8 +12,10 @@ class Search extends CI_Controller {
 	public function cari_rute()
 	{
 		$rutefrom = $this->input->get('rute_from');
+		$ruteto = $this->input->get('rute_to');
+		$departat = $this->input->get('depart_at');
 
-		$data['rute'] = $this->m_data->tampilPencarian($rutefrom);
+		$data['rute'] = $this->m_data->tampilPencarian($rutefrom, $ruteto, $departat);
 		$this->load->view('result', $data);
 	}
 }

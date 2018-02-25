@@ -62,7 +62,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-ticktravel-nav-toggle ticktravel-nav-toggle dark"><i></i></a>
-					<h1 id="ticktravel-logo"><a href="#"><i class="icon-airplane"></i>Tickeristic Travel</a></h1>
+					<h1 id="ticktravel-logo"><a href="<?php echo base_url('travel') ?>"><i class="icon-airplane"></i>Tickeristic Travel</a></h1>
 					<!-- START #ticktravel-menu-wrap -->
 					
 					<nav id="ticktravel-menu-wrap" role="navigation">
