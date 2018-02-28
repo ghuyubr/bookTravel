@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lihat user</title>
+	<title>Lihat maskapai</title>
 </head>
 <body>
 	<div class="table-responsive">
 		<table id="table_id" class="table table-bordered table-striped table-hover">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>Username</th>
-					<th>Fullname</th>
-					<th>Email</th>
-					<th>level</th>
-					<th>Aksi</th>
+					<th>id</th>
+					<th>Reservation code</th>
+					<th>Reservation at</th>
+					<th>reservation date</th>
+					<th>customer id</th>
+					<th>seat code</th>
+					<th>rute id</th>
+					<th>depart at</th>
+					<th>price</th>
+					<th>user id</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
-				foreach($show->result() as $tuser)
+				foreach($show->result() as $tReservation)
 				{?>
 					<tr>
-						<td><?php echo $tuser->userid ?></td>
-						<td><?php echo $tuser->username ?></td>
-						<td><?php echo $tuser->fullname ?></td>
-						<td><?php echo $tuser->email ?></td>
-						<td><?php echo $tuser->level ?></td>
+						<td><?php echo $tReservation->id ?></td>
+						<td><?php echo $tReservation->reservation_code ?></td>
+						<td><?php echo $tReservation->reservation_at ?></td>
+						<td><?php echo $tReservation->reservation_date ?></td>
+						<td><?php echo $tReservation->customerid ?></td>
+						<td><?php echo $tReservation->seat_code ?></td>
+						<td><?php echo $tReservation->ruteid ?></td>
+						<td><?php echo $tReservation->depart_at ?></td>
+						<td><?php echo $tReservation->price ?></td>
+						<td><?php echo $tReservation->userid ?></td>
 						<td>
-						<!-- 	<div class="btn btn-warning" ><?php echo anchor('admin/update_user/'.$tuser->userid,'Edit');?></div> -->
-							<a class="btn btn-warning" href="<?php echo base_url('admin/update_user/'.$tuser->userid);?>">Edit</a> 							
-							<!-- <button class="btn btn-warning" onclick="ngedit_user(<?php echo $tuser->userid;?>)">Edit</button> -->
-							<button class="btn btn-danger" onclick="ngapus_user(<?php echo $tuser->userid;?>)">Hapus</button>
+							<!-- <div class="btn btn-warning"><?php echo anchor('admin/update_reservation/'.$tReservation->id,'Edit'); ?></div> -->
+							<a class="btn btn-warning" href="<?php echo base_url('admin/update_reservation/'.$tReservation->id);?>">Edit</a> 	
+							<button class="btn btn-danger" onclick="hapus_user(<?php echo $tReservation->id;?>)">Hapus</button>
 						</td>
 					</tr>
 				<?php } ?>
@@ -53,7 +61,7 @@
 
 		      	//Ajax Load data from ajax
 		      	$.ajax({
-			        url : "<?php echo base_url('admin/update_user/')?>/" + id,
+			        url : "<?php echo base_url('user/user/edit_profile/')?>/" + id,
 			        type: "GET",
 			        dataType: "JSON",
 			        success: function(data)
@@ -72,14 +80,14 @@
 	    		});
 	    	}
 
-	    	function ngapus_user(id)
+	    	function hapus_user(id)
 		    {
-		      var url = "<?php echo base_url(); ?>";
+		      var url = "<?php echo base_url(''); ?>";
 		      if(confirm('Anda yakin akan menghapus user dengan id ' + id + '?'))
 		      {
 		      	if (true) 
 		      	{
-		      		window.location = url+"admin/hapus/"+id;
+		      		window.location = url+"admin/hapus_rute/"+id;
 		      	}
 		      	else
 		      	{

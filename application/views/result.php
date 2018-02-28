@@ -86,16 +86,17 @@
 					$hasil = $rute->result();
 					foreach ($hasil as $trute) {
 						?>
-					<div class="col-md-12 col-sm-12 ticktravel-tours animate-box fadeInUp animated" data-animate-effect="fadeIn" style="background: url('<?php echo $trute->lokasi_gambar?> ');background-size: cover; background-position: center;">
+					<div class="col-md-12 col-sm-12 ticktravel-tours animate-box fadeInUp animated" data-animate-effect="fadeIn" style="background: url('<?php echo $trute->gambar?> ');background-size: cover; background-position: center;">
 						<div href="#">
 								<div style="position: relative;" class="desc">
 									<span>
-										Garuda Indonesia
+										<?php echo $trute->kodene?>
+										<?php $this->session->set_userdata('kodejjj', $trute->kodene); ?>
 									</span>
 									<h3><?php echo $trute->rute_from?> ke<i class="fa fa-arrow-right"></i> <?php echo $trute->rute_to?></h3>
 									<span><?php echo $trute->depart_at?></span>
-									<span class="price">Rp <?php echo $trute->price?></span>
-									<a class="btn btn-primary" href="#">pesan sekarang <i class="icon-arrow-right22"></i></a>
+									<span class="price"><?php echo "Rp " .number_format($trute->regane)?><?php $this->session->set_userdata('priceee', $trute->regane); ?></span>
+									<a class="btn btn-primary" href="<?php echo base_url('action/detailbooking/'.$trute->id) ?>">pesan sekarang <i class="icon-arrow-right22"></i></a>
 								</div>
 						</div>
 					</div>

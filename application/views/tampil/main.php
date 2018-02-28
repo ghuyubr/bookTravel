@@ -574,7 +574,12 @@
 
     //Date picker
     $('#datepicker').datepicker({
-      autoclose: true
+      autoclose: true,
+      format:'yyyy-mm-dd',
+    }) //now
+    
+    $('#now').date({
+      format:'yyyy-mm-dd',
     })
       $(function () {
     //Initialize Select2 Elements

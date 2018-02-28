@@ -19,7 +19,7 @@ class Admin extends CI_Controller{
 
 		$data['show']=$this->m_data->select('user');
 		$data['side']='tampil/side';
-		$data['content']='tampil/v_user';
+		$data['content']='tampil/v_admincontrol';
 		$this->load->view('tampil/main',$data);
 	}
 	function v_user()
@@ -44,6 +44,14 @@ class Admin extends CI_Controller{
 		$data['side']='tampil/side';
 		$data['content']='tampil/v_rutemaskapai';
 		$this->load->view('tampil/main',$data);
+	}		
+
+	function reservation()
+	{
+		$data['show']=$this->m_data->select('reservation');
+		$data['side']='tampil/side';
+		$data['content']='tampil/reservation';
+		$this->load->view('tampil/main',$data);
 	}	
 
 	function v_tambahrute()
@@ -58,6 +66,12 @@ class Admin extends CI_Controller{
 		$where = array('userid' => $id);
 		$this->m_data->hapus_data($where,'user');
 		redirect('admin');
+	}	
+
+	function hapus_rute($id){
+		$where = array('id' => $id);
+		$this->m_data->hapus_data($where,'rute');
+		redirect('admin/v_rutemaskapai');
 	}
 
 	function update_user($id){
@@ -65,6 +79,14 @@ class Admin extends CI_Controller{
 		$data['show'] = $this->m_data->edit_data($where,'user')->result();
 		$data['side']='tampil/side';
 		$data['content']='tampil/v_edit';
+		$this->load->view('tampil/main',$data);
+	}		
+
+	function update_reservation($id){
+		$where = array('id' => $id);
+		$data['show'] = $this->m_data->edit_data($where,'reservation')->result();
+		$data['side']='tampil/side';
+		$data['content']='tampil/v_editreservation';
 		$this->load->view('tampil/main',$data);
 	}	
 
@@ -84,8 +106,8 @@ class Admin extends CI_Controller{
 		$data = array(
 			'username' => $username,
 			'email' => $email,
-			'password' => md5($password),
 			'fullname' => $fullname,
+			'password' => md5($password),
 			'level' => "user"
 			);
 		$this->m_data->input_data($data,'rute');

@@ -65,7 +65,7 @@ figure {
 
 ::-moz-selection {
   color: #fcfcfc;
-  background: #2277e0;
+  background: #292e34;
 }
 
 ::selection {
@@ -158,7 +158,8 @@ figure {
   bottom: 0;
   right: 0;
   z-index: 1;
-  background-color: #5486ff;
+  background-color: #292e34;
+  background-image: url(http://localhost/booktravel/assets/images/jakarta.jpg);
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
@@ -1981,3 +1982,4 @@ div.cs-select span {
 }
 
 /*# sourceMappingURL=style.css.map */
+

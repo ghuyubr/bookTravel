@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</title>
+  <title>booktravel</title>
 </head>
 <body>
-	<center>
-		<h3>Edit Data</h3>
-	</center>
-	<?php foreach($show as $u){ ?>
+  <center>
+    <h3>Edit Data</h3>
+  </center>
+  <?php foreach($show as $u){ ?>
 
             <form class="form-horizontal" action="<?php echo base_url(). 'Action/update'; ?>" method="post">
 
@@ -17,9 +17,12 @@
                   <input type="hidden" name="id" value="<?php echo $u->userid ?>">
                   <input class="form-control" placeholder="Enter ..." type="text" name="username" value="<?php echo $u->username ?>">
 
-	       
+         
                   <label>Fullname</label>
                   <input class="form-control" placeholder="Enter ..." type="text" name="fullname" value="<?php echo $u->fullname ?>">
+
+                  <label>password</label>
+                  <input class="form-control" placeholder="Enter ..." type="password" name="fullname" value="<?php echo $u->password ?>">
                 
                   <label>Email</label>
                   <input class="form-control" placeholder="Enter ..." type="text" name="email" value="<?php echo $u->email ?>">
@@ -35,6 +38,6 @@
               <!-- /.box-footer -->
             </form>
 
-	<?php } ?>
+  <?php } ?>
 </body>
 </html>

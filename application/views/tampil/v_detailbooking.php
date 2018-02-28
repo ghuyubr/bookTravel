@@ -80,186 +80,43 @@
 
 		<!-- end:header-top -->
 	
-		<div class="ticktravel-hero">
-			<div class="ticktravel-overlay"></div>
-			<div class="ticktravel-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
-				<div class="desc">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-5 col-md-5">
-								<div class="tabulation animate-box">
-
-								  <!-- Nav tabs -->
-								   <ul class="nav nav-tabs" role="tablist">
-								      <li role="presentation" class="active">
-								      	<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Flights</a>
-								   </ul>
-
-								   <!-- Tab panes -->
-									<div class="tab-content">
-									 <div role="tabpanel" class="tab-pane active" id="flights">
-									 	<form action="<?php echo base_url('Search/cari_rute'); ?>">
-										<div class="row">
-											<!-- <div class="col-xxs-12 col-xs-6 mt">
-												<div class="input-field">
-													<label for="from">Dari</label>
-													<input name="rute_from" type="text" class="form-control" id="from-place" placeholder="Semarang, Jawa tengah"/>
-												</div>
-											</div> -->
-
-											<div class="col-xxs-12 col-xs-6 mt">
-												<section>
-													<label for="class">Dari</label>
-													<select class="cs-select cs-skin-border" name="rute_from">
-														<option value="jakarta" selected>jakarta</option>
-														<option value="Yogyakarta">Yogyakarta</option>
-														<option value="bali">bali</option>
-														<option value="makasar">Makasar</option>
-														<option value="solo">Solo</option>
-													</select>
-												</section>
-											</div>
-
-											
-
-											<!-- <div class="col-xxs-12 col-xs-6 mt">
-												<div class="input-field">
-													<label for="from">Ke</label>
-													<input name="rute_to" type="text" class="form-control" id="to-place" placeholder="Bandung, Jawa barat"/>
-												</div>
-											</div> -->
-
-
-											<div class="col-xxs-12 col-xs-6 mt">
-												<section>
-													<label for="class">Ke</label>
-													<select class="cs-select cs-skin-border" name="rute_to">
-														<option value="makasar" selected>Makasar</option>
-														<option value="jakarta">Jakarta</option>
-														<option value="Yogyakarta">Yogyakarta</option>
-														<option value="bali">bali</option>
-														<option value="solo">Solo</option>
-													</select>
-												</section>
-											</div>
-
-											<div class="col-xxs-12 col-xs-6 mt">
-												<div class="input-field">
-													<label for="from">pergi</label>
-													<input name="depart_at" type="date" class="form-control" id="to-place" placeholder="02/12/2018"/>
-												</div>
-											</div>
-										<!-- 	<div class="col-xxs-12 col-xs-12 mt alternate">
-												<div class="input-field">
-													<label for="date-start">Pergi</label>
-													<input name="depart_at" type="date" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
-												</div>
-											</div> -->
-											<!-- <div class="col-xxs-12 col-xs-6 mt alternate">
-												<div class="input-field">
-													<label for="date-end">Pulang</label>
-													<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
-												</div>
-											</div> -->
-											<!-- <div class="col-sm-12 mt">
-												<section>
-													<label for="class">Class</label>
-													<select class="cs-select cs-skin-border">
-														<option value="" disabled selected>Economy</option>
-														<option value="economy">Economy</option>
-														<option value="first">First</option>
-														<option value="business">Business</option>
-													</select>
-												</section>
-											</div> -->
-											<div class="col-md-12 col-xs-6 mt">
-												<section>
-													<label for="class">Kelas</label>
-													<select class="cs-select cs-skin-border">
-														<option value="Ekonomi" disabled selected>Ekonomi</option>
-														<option value="Ekonomi">Ekonomi</option>
-														<option value="first class">first class</option>								
-													</select>
-												</section>
-											</div>
-
-											<div class="col-xxs-12 col-xs-6 mt">
-												<section>
-													<label for="class">Jumlah penumpang</label>
-													<input type="number" min="1" name="jml" class="form-control">
-												</section>
-											</div>
-											<div class="col-xxs-12 col-xs-6 mt">
-												<section>
-													<label for="class">Anak kecil</label>
-													<select class="cs-select cs-skin-border">
-														<option value="" disabled selected>1</option>
-														<option value="1">1</option>
-														<option value="2">2</option>
-														<option value="3">3</option>
-														<option value="4">4</option>
-													</select>
-												</section>
-											</div>
-											<div class="col-xs-12">
-												<input type="submit" class="btn btn-primary btn-block" value="Search Flight">
-											</div>
-										</div>
-									</form>
-									 </div>
-
-
-					
-									</div>
-
-								</div>
-							</div>
-							<div class="desc2 animate-box">
-								<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
-									<p>Tickeristic travel <a href="<?php echo base_url('') ?>" class="ticktravel-site-name">Register now</a></p>
-									<h2>Pesan tiket penerbangan lokal di sini</h2>
-									<h3>Terbang dari Jakarta, Bali, Yogyakarta, dll.</h3>
-									<!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
-								</div>
-							</div>
-						</div>
+		<div class="ticktravel">
+			<div class="container">
+				<form action="<?php echo base_url('action/booking') ?>" method="post">			
+					<div  class="col-md-12 col-sm-12" style="padding-top: 30px;">
+						<h3>detail pemesanan</h3>
 					</div>
-				</div>
-			</div>
+					<div class="col-md-2 col-sm-6" >pesawat </div>
+					<div  class="col-md-10 col-sm-6"><?php echo $kodejjj ; ?></div>
 
+					<div  class="col-md-2 col-sm-6">dari </div>
+					<div  class="col-md-10 col-sm-6"><?php echo  $rute_from; ?> </div>
+
+					<div class="col-md-2 col-sm-6" >ke </div>
+					<div  class="col-md-10 col-sm-6"><?php echo  $rute_to; ?></div>
+
+					<div  class="col-md-2 col-sm-6">class </div>
+					<div  class="col-md-10 col-sm-6">ekonomi</div>				
+
+					<div  class="col-md-2 col-sm-6">depart at </div>
+					<div  class="col-md-10 col-sm-6"><?php echo  $depart_at; ?></div>
+
+					<div class="col-md-2 col-sm-6" >total penumpang </div>
+					<div  class="col-md-10 col-sm-6"><?php echo  $jml; ?></div>
+
+					<div class="col-md-2 col-sm-6" >total harga </div>
+					<div  class="col-md-10 col-sm-6" style="padding-bottom: 20px"><?php echo  $priceee; ?></div>
+
+					<input type="hidden" name="jmlPenumpang" value="<?php echo  $jml; ?>">
+					<input type="hidden" name="id_rute" value="<?php echo  $idnya; ?>">
+				
+					<button type="submit" class="btn btn-primary" style="margin-left: 14px; margin-bottom: 30px;">Lanjutkan pemesanan</button>
+					</tr>
+				</form>
+			</div>
 		</div>
 		
-		<div id="ticktravel-tours" class="ticktravel-section-gray">
-			<div class="container">
 
-					<div class="col-md-4 col-sm-6 ticktravel-tours animate-box" data-animate-effect="fadeIn">
-						<div href="#"><img src="<?php echo base_url('assets/images/travel.jpeg')?>" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-								<div class="desc">
-								<span></span>
-								<h3>Hongkong</h3>
-								<span>2 nights + Flight 4*Hotel</span>
-								<span class="price">$1,000</span>
-								<a class="btn btn-primary" href="#">pesan sekarang <i class="icon-arrow-right22"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 ticktravel-tours animate-box" data-animate-effect="fadeIn">
-						<div href="#"><img src="<?php echo base_url('assets/images/place-3.jpg')?>" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-							<div class="desc">
-								<span></span>
-								<h3>Hongkong</h3>
-								<span>2 nights + Flight 4*Hotel</span>
-								<span class="price">$1,000</span>
-								<a class="btn btn-primary" href="#">Book Now <i class="icon-arrow-right22"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12 text-center animate-box">
-						<p><a class="btn btn-primary btn-outline btn-lg" href="#">See All Offers <i class="icon-arrow-right22"></i></a></p>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
 		<!-- ticktravel-blog-section -->

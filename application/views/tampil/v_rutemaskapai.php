@@ -29,8 +29,9 @@
 						<td><?php echo $trute->rute_to ?></td>
 						<td><?php echo $trute->price ?></td>
 						<td>
-							<div class="btn btn-warning"><?php echo anchor('admin/update_rute/'.$trute->id,'Edit'); ?></div>
-							<button class="btn btn-danger" onclick="ngapus_user(<?php echo $trute->id;?>)">Hapus</button>
+							<!-- <div class="btn btn-warning"><?php echo anchor('admin/update_rute/'.$trute->id,'Edit'); ?></div> -->
+							<a class="btn btn-warning" href="<?php echo base_url('admin/update_rute/'.$trute->id);?>">Edit</a> 	
+							<button class="btn btn-danger" onclick="hapus_user(<?php echo $trute->id;?>)">Hapus</button>
 						</td>
 					</tr>
 				<?php } ?>
@@ -72,14 +73,14 @@
 	    		});
 	    	}
 
-	    	function ngapus_user(id)
+	    	function hapus_user(id)
 		    {
-		      var url = "<?php echo base_url(); ?>";
+		      var url = "<?php echo base_url(''); ?>";
 		      if(confirm('Anda yakin akan menghapus user dengan id ' + id + '?'))
 		      {
 		      	if (true) 
 		      	{
-		      		window.location = url+"admin/hapus/"+id;
+		      		window.location = url+"admin/hapus_rute/"+id;
 		      	}
 		      	else
 		      	{
